@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Your Name / Site Title"
+title                    : "Lorenzo Sani"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
+name                     : &name "Lorenzo Sani"
+description              : &description "CS PhD Canditate @ University of Cambridge"
 url                      : https://relogu.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "relogu/relogu.github.io"
@@ -146,6 +146,7 @@ exclude:
   - package.json
   - tmp
   - vendor
+  - "*.old"
 keep_files:
   - .git
   - .svn
