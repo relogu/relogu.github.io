@@ -81,14 +81,14 @@ analytics:
 # Site Author
 author:
   name             : "Lorenzo Sani"
-  avatar           : "profile.jpg"
+  avatar           : "lorenzo.jpeg"
   bio              : "Hi there! I am a PhD candidate in Computer Science at the University of Cambridge under the supervision of Prof. Nicholas D. Lane. My research focuses on large-scale federated laerning, federated learning efficiency and optimization. I'm part of the CaMLSys group."
   location         : "Cambridge, United Kingdom"
   employer         : "University of Cambridge"
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=IoCEzUMAAAAJ&hl=en"
   email            : "ls985@cam.ac.uk"
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  researchgate     : # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
   codepen          :
