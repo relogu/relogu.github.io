@@ -1,0 +1,11 @@
+---
+title: "MPhil Thesis Supervisor"
+collection: teaching
+type: "Thesis supervisor"
+permalink: /teaching/2023-cam-mphil-bao-supervisor
+venue: "University of Cambridge, Department of Computer Science and Technology"
+date: 2023-11-01
+location: "Cambridge, United Kingdom"
+---
+
+I co-supervised **Bao Nguyen** during his MPhil Thesis project. The work investigated the possibility of applying sheaf neural networks in the context of federated learning.
