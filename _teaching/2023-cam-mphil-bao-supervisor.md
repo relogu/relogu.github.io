@@ -8,4 +8,4 @@ date: 2023-11-01
 location: "Cambridge, United Kingdom"
 ---
 
-I co-supervised **Bao Nguyen** during his MPhil Thesis project. The work investigated the possibility of applying sheaf neural networks in the context of federated learning.
+I co-supervised **Bao Nguyen** during his MPhil Thesis project. The work investigated the possibility of applying sheaf neural networks in the context of federated learning. A [research paper](https://arxiv.org/abs/2405.20882) describing our approach is available on arXiv.

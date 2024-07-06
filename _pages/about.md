@@ -11,8 +11,9 @@ redirect_from:
 I am a Ph.D. candidate in Computer Science at the University of Cambridge.
 I am supervised by [Prof. Nicholas D. Lane](http://niclane.org/), the head of the [CaMLSys group](https://mlsys.cst.cam.ac.uk/) at the Computer Laboratory.
 My research interests are in the areas of federated learning and edge computing.
-I am interested in designing privacy-preserving machine learning algorithms to edge devices, particularly federated learning.
+I am interested in designing privacy-preserving machine learning algorithms for edge devices, particularly federated learning.
 My current research focuses on optimizing the efficiency of large-scale federated learning settings.
+We recently proposed the first fully federated training system and the completely reproducible recipe for federated **pre-training** of large language models on cross-silo settings.
 
 I received my Bachelor's Degree in Physics from the University of Bologna in 2019 with a thesis on the fine structure of hydrogen-like atoms.
 Then, I received my Master's Degree in Applied Physics from the University of Bologna in 2021 with a thesis titled "Unsupervised clustering of MDS data using federated learning" under the supervision of [Prof. Enrico Giampieri](https://www.unibo.it/sitoweb/enrico.giampieri) and the co-supervision of [Prof. Gastone Castellani](https://www.unibo.it/sitoweb/gastone.castellani).
