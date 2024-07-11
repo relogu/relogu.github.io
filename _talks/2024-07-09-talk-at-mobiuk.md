@@ -11,4 +11,4 @@ location: "Southampton, UK"
 I attended MobiUK '24 in Southampton presenting the work "Worldwide Edge-SILO Federated Training of Language Models" on behalf of Alex Iacob who couldn't attend.
 For more details regarding this project please visit the [project page](https://relogu.github.io/publication/2024-05-23-worldlm).
 
-![MobiUK '24](/images/talks/2024-07-09-talk-at-mobiuk.jpg)
+![MobiUK '24](../images/talks/2024-07-09-talk-at-mobiuk.jpg)
