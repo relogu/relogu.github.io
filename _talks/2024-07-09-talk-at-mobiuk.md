@@ -3,7 +3,7 @@ title: "Worldwide Edge-SILO Federated Training of Language Models @ MobiUK '24"
 collection: talks
 type: "Talk"
 permalink: /talks/2024-07-09-talk-at-mobiuk
-venue: University of Southampton
+venue: "MobiUK '24 @ University of Southampton"
 date: 2024-07-09
 location: "Southampton, UK"
 ---
