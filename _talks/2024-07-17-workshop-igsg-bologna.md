@@ -8,7 +8,7 @@ date: 2024-07-17
 location: "Bologna, Italy"
 ---
 
-I was invited by Eleonora Ferrari to discuss the future of AI and the impact of related emerging technologies on the juridical field. The workshop was organized by the [IGSG Bologna](https://www.igsg.cnr.it/en/).
+I was invited by [Eleonora Ferrari](https://www.unibo.it/sitoweb/eleonora.ferrari27) to discuss the future of AI and the impact of related emerging technologies on the juridical field. The workshop was organized by the [IGSG Bologna](https://www.igsg.cnr.it/en/).
 
 Talk Abstract:
 
