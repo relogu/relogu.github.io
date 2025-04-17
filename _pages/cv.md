@@ -9,18 +9,10 @@ redirect_from:
 
 {% include base_path %}
 
-## Academic CV
+## Curriculm Vitae
 
-<object data="/files/CV_academic.pdf" type="application/pdf" width="100%" height="100%">
+<object data="/files/CV.pdf" type="application/pdf" width="100%" height="100%">
     <p>It appears you don't have a PDF plugin for this browser.
-    No biggie... you can <a href="/files/CV_academic.pdf">click here to
-    download the PDF file.</a></p>
-</object>
-
-## Industry CV
-
-<object data="/files/CV_industry.pdf" type="application/pdf" width="100%" height="100%">
-    <p>It appears you don't have a PDF plugin for this browser.
-    No biggie... you can <a href="/files/CV_industry.pdf">click here to
+    No biggie... you can <a href="/files/CV.pdf">click here to
     download the PDF file.</a></p>
 </object>
