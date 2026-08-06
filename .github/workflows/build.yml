@@ -1,0 +1,49 @@
+name: Build site
+
+# Catches the class of bug that silently dropped two publications from the live
+# site for over a year: invalid YAML front matter builds "successfully" on
+# GitHub Pages while quietly skipping the offending file.
+on:
+  push:
+    branches: [master, relogu]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: true
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --trace
+        env:
+          JEKYLL_ENV: production
+          LANG: en_US.UTF-8
+
+      - name: Fail on skipped front matter
+        run: |
+          # jekyll build exits 0 even when it skips files with broken YAML,
+          # so re-run and grep the log for the warning.
+          bundle exec jekyll build 2>&1 | tee build.log
+          if grep -q "YAML Exception" build.log; then
+            echo "::error::A file has invalid YAML front matter and was skipped."
+            exit 1
+          fi
+        env:
+          LANG: en_US.UTF-8
+
+      - name: Check every publication rendered
+        run: |
+          expected=$(ls _publications/*.md | wc -l)
+          actual=$(ls _site/publication/*.html | wc -l)
+          echo "publications: $expected source files, $actual rendered pages"
+          if [ "$expected" -ne "$actual" ]; then
+            echo "::error::$((expected - actual)) publication(s) failed to render."
+            exit 1
+          fi

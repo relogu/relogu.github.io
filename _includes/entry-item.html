@@ -1,0 +1,24 @@
+{%- comment -%}
+  Renders one collection item as a list row.
+  Params: include.item, include.show_excerpt (default true)
+{%- endcomment -%}
+{%- assign item = include.item -%}
+<li class="entry">
+  <h3 class="entry-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+  <div class="entry-meta">
+    <time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: "%b %Y" }}</time>
+    {%- if item.venue %}<span class="chip{% if item.venue != 'arXiv' and item.venue != 'Preprint' %} chip-accent{% endif %}">{{ item.venue }}</span>{% endif -%}
+    {%- if item.location %}<span>{{ item.location }}</span>{% endif -%}
+    {%- if item.type %}<span class="chip">{{ item.type }}</span>{% endif -%}
+  </div>
+  {%- if include.show_excerpt != false and item.excerpt %}
+  <p class="entry-excerpt">{{ item.excerpt | strip_html | normalize_whitespace | truncate: 220 }}</p>
+  {%- endif %}
+  {%- if item.paperurl or item.slidesurl or item.codeurl %}
+  <div class="entry-links">
+    {%- if item.paperurl %}<a href="{{ item.paperurl }}">Paper →</a>{% endif -%}
+    {%- if item.slidesurl %}<a href="{{ item.slidesurl | relative_url }}">Slides →</a>{% endif -%}
+    {%- if item.codeurl %}<a href="{{ item.codeurl }}">Code →</a>{% endif -%}
+  </div>
+  {%- endif %}
+</li>

@@ -1,0 +1,25 @@
+---
+layout: base
+---
+<div class="wrap">
+  <header class="entry-header">
+    <h1>{{ page.title }}</h1>
+    {%- if page.intro %}<p class="prose" style="color: var(--text-muted)">{{ page.intro }}</p>{% endif %}
+  </header>
+
+  {%- if content != '' %}<div class="prose entry-body">{{ content }}</div>{% endif %}
+
+  {%- assign items = site[page.collection_name] | sort: "date" | reverse -%}
+  {%- assign grouped = items | group_by_exp: "i", "i.date | date: '%Y'" -%}
+  {%- for group in grouped %}
+    <h2 class="year-heading">{{ group.name }}</h2>
+    <ul class="entry-list">
+      {%- for item in group.items %}{% include entry-item.html item=item show_excerpt=page.show_excerpt %}{% endfor %}
+    </ul>
+  {%- endfor %}
+
+  {%- if items.size == 0 %}
+    <p style="color: var(--text-faint)">Nothing here yet.</p>
+  {%- endif %}
+  <div style="height: 3rem"></div>
+</div>

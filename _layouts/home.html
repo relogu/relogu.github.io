@@ -1,0 +1,56 @@
+---
+layout: base
+---
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <h1>{{ site.name }}</h1>
+        <p class="role">{{ page.role | default: site.description | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+        <div class="prose">{{ content }}</div>
+        <div class="link-row">
+          {%- if site.author.email %}<a href="mailto:{{ site.author.email }}">Email</a>{% endif -%}
+          <a href="{{ '/cv/' | relative_url }}">CV</a>
+          {%- if site.author.googlescholar %}<a href="{{ site.author.googlescholar }}">Google Scholar</a>{% endif -%}
+          {%- if site.author.github %}<a href="https://github.com/{{ site.author.github }}">GitHub</a>{% endif -%}
+          {%- if site.author.linkedin %}<a href="{{ site.author.linkedin }}">LinkedIn</a>{% endif -%}
+          {%- if site.author.orcid %}<a href="{{ site.author.orcid }}">ORCID</a>{% endif -%}
+        </div>
+      </div>
+      {%- if site.author.avatar %}
+      <img class="hero-photo" src="{{ '/images/' | append: site.author.avatar | relative_url }}"
+           alt="Portrait of {{ site.name }}" width="400" height="400">
+      {%- endif %}
+    </div>
+  </div>
+</section>
+
+{%- assign featured = site.publications | where: "featured", true | sort: "date" | reverse -%}
+{%- if featured.size > 0 %}
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Selected publications</h2>
+      <a href="{{ '/publications/' | relative_url }}">All publications →</a>
+    </div>
+    <ul class="entry-list">
+      {%- for item in featured %}{% include entry-item.html item=item %}{% endfor %}
+    </ul>
+  </div>
+</section>
+{%- endif %}
+
+{%- assign recent_talks = site.talks | sort: "date" | reverse -%}
+{%- if recent_talks.size > 0 %}
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Recent talks</h2>
+      <a href="{{ '/talks/' | relative_url }}">All talks →</a>
+    </div>
+    <ul class="entry-list">
+      {%- for item in recent_talks limit: 4 %}{% include entry-item.html item=item show_excerpt=false %}{% endfor %}
+    </ul>
+  </div>
+</section>
+{%- endif %}
