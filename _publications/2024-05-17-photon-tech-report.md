@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/2024-05-17-photon-tech-report
 excerpt: 'We present in this work the first fully federated system for the federated pre-training of large language models.'
 date: 2024-05-17
-venue: 'International Workshop on Federated Foundation Models In Conjunction with NeurIPS 2024 (FL@FM-NeurIPS'24)'
+venue: "International Workshop on Federated Foundation Models In Conjunction with NeurIPS 2024 (FL@FM-NeurIPS'24)"
 paperurl: 'https://arxiv.org/abs/2405.10853'
 citation: 'Lorenzo Sani, Alex Iacob, Zeyu Cao, Bill Marino, Yan Gao, Tomas Paulik, Wanru Zhao, William F. Shen, Preslav Aleksandrov, Xinchi Qiu, & Nicholas D. Lane. (2024). The Future of Large Language Model Pre-training is Federated.'
 ---
