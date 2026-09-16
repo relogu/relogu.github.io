@@ -71,11 +71,13 @@ first or joint-first author at a top venue). Otherwise leave it off.
 
 ```bash
 LANG=en_US.UTF-8 bundle exec jekyll build 2>&1 | grep -i "error\|YAML Exception"
-ls _publications/*.md | wc -l && ls _site/publication/*.html | wc -l
+ls _publications/*.md | wc -l
+grep -L 'http-equiv="refresh"' _site/publication/*.html | wc -l
 ```
 
-Those two counts must match. Do not open the PR if the build logs a YAML
-exception.
+Those two counts must match; the `grep -L` skips the redirect stubs that
+`redirect_from` writes into the same folder. Do not open the PR if the build
+logs a YAML exception.
 
 ## 5. Open the PR
 

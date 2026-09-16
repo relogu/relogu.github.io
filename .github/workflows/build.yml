@@ -41,7 +41,8 @@ jobs:
       - name: Check every publication rendered
         run: |
           expected=$(ls _publications/*.md | wc -l)
-          actual=$(ls _site/publication/*.html | wc -l)
+          # Skip jekyll-redirect-from stubs, which are also written to _site/publication/.
+          actual=$(grep -L 'http-equiv="refresh"' _site/publication/*.html | wc -l)
           echo "publications: $expected source files, $actual rendered pages"
           if [ "$expected" -ne "$actual" ]; then
             echo "::error::$((expected - actual)) publication(s) failed to render."
