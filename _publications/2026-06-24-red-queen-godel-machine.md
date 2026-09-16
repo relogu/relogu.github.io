@@ -2,13 +2,13 @@
 title: "The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators"
 collection: publications
 permalink: /publication/2026-06-24-red-queen-godel-machine
-excerpt: "The Red Queen Gödel Machine (RQGM) is an evolutionary framework for recursive self-improvement where the evaluation criterion co-evolves alongside the agents being improved."
+excerpt: 'A self-improving system in which agents and the evaluators that score them co-evolve, avoiding the reward hacking that fixed evaluators invite.'
 date: 2026-06-24
 venue: "arXiv"
 paperurl: "https://arxiv.org/abs/2606.26294"
 citation: "Alex Iacob, Andrej Jovanović, William F. Shen, Daniel Burkhardt, Meghdad Kurmanji, Nurbek Tastan, Lorenzo Sani, Niccolò Alberto Elia Venanzi, Ambroise Odonnat, Zeyu Cao, Bill Marino, Xinchi Qiu, & Nicholas D. Lane. (2026). The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators."
 ---
-The Red Queen Gödel Machine (RQGM) is an evolutionary framework for recursive self-improvement where the evaluation criterion co-evolves alongside the agents being improved.
+A self-improving system in which agents and the evaluators that score them co-evolve, avoiding the reward hacking that fixed evaluators invite.
 
 [Read the paper here.](https://arxiv.org/abs/2606.26294)
 

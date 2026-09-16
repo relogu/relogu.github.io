@@ -1,21 +1,39 @@
 ---
+layout: home
 permalink: /
-title: "Bio"
-excerpt: "About me"
-author_profile: true
-redirect_from: 
+title: "Lorenzo Sani"
+role: "Research Scientist at **Flower Labs** · finishing a PhD in Computer Science at the **University of Cambridge**"
+excerpt: "I work on the systems and optimization that make large-scale federated and distributed training of foundation models practical."
+redirect_from:
   - /about/
   - /about.html
 ---
 
-I am a Ph.D. candidate in Computer Science at the University of Cambridge.
-I am supervised by [Prof. Nicholas D. Lane](http://niclane.org/), the head of the [CaMLSys group](https://mlsys.cst.cam.ac.uk/) at the Computer Laboratory.
-My research interests are in the areas of federated learning and edge computing.
-I am interested in designing privacy-preserving machine learning algorithms for edge devices, particularly federated learning.
-My current research focuses on optimizing the efficiency of large-scale federated learning settings.
-We recently proposed the first fully federated training system and the completely reproducible recipe for federated **pre-training** of large language models on cross-silo settings.
+I am a Research Scientist at [Flower Labs](https://flower.ai/), where I work on
+federated and distributed training of foundation models. In parallel I am
+finishing my PhD in Computer Science at the University of Cambridge, supervised
+by [Prof. Nicholas D. Lane](http://niclane.org/) in the
+[CaMLSys group](https://mlsys.cst.cam.ac.uk/) at the Computer Laboratory.
 
-I received my Bachelor's Degree in Physics from the University of Bologna in 2019 with a thesis on the fine structure of hydrogen-like atoms.
-Then, I received my Master's Degree in Applied Physics from the University of Bologna in 2021 with a thesis titled "Unsupervised clustering of MDS data using federated learning" under the supervision of [Prof. Enrico Giampieri](https://www.unibo.it/sitoweb/enrico.giampieri) and the co-supervision of [Prof. Gastone Castellani](https://www.unibo.it/sitoweb/gastone.castellani).
-During my Master's Degree, I was involved in the [GenoMed4All](https://genomed4all.eu/) project to redact [Deliverable 6.2 - "Preliminary conclusions about Federated Learning applied to clinical data"](https://zenodo.org/record/5862591).
-During my Master's Degree, I also collaborated with the [CaMLSys group](https://mlsys.cst.cam.ac.uk/) at the University of Cambridge on the [Flower Framework](https://flower.dev/) project, see the [paper](https://arxiv.org/abs/2007.14390).
+My research asks a simple question: how do we train large models when the data
+and the compute are spread across the world and cannot be pooled? That has led
+me through federated pre-training of language models — the
+[Photon](/publication/2024-11-05-photon-system-paper) system and the
+[DEPT](/publication/2024-10-07-dept) method — and, more recently, to
+communication-efficient distributed optimizers such as
+[DES-LOC](/publication/2025-05-28-des-loc), [MT-DAO](/publication/2025-10-06-mt-dao),
+and [LoRDO](/publication/2026-02-04-lordo), and to sparse and modular
+architectures like [FoMoE](/publication/2026-06-17-fomoe).
+
+Before Cambridge, I read Physics at the University of Bologna: a Bachelor's in
+2019 with a thesis on the fine structure of hydrogen-like atoms, and a Master's
+in Applied Physics in 2021 with a thesis on unsupervised clustering of MDS data
+using federated learning, supervised by
+[Prof. Enrico Giampieri](https://www.unibo.it/sitoweb/enrico.giampieri) and
+[Prof. Gastone Castellani](https://www.unibo.it/sitoweb/gastone.castellani).
+During that time I contributed to the [GenoMed4All](https://genomed4all.eu/)
+project — including
+[Deliverable 6.2](https://zenodo.org/record/5862591) on federated learning for
+clinical data — and began collaborating with CaMLSys on the
+[Flower framework](https://flower.ai/), now the most widely used open-source
+federated learning framework.

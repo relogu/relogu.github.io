@@ -1,18 +1,15 @@
 ---
-layout: archive
-title: "CV"
+layout: page
+title: "Curriculum Vitae"
 permalink: /cv/
-author_profile: true
+full_width: true
 redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+<p><a href="/files/CV.pdf">Download as PDF →</a></p>
 
-## Curriculm Vitae
-
-<object data="/files/CV.pdf" type="application/pdf" width="100%" height="100%">
-    <p>It appears you don't have a PDF plugin for this browser.
-    No biggie... you can <a href="/files/CV.pdf">click here to
-    download the PDF file.</a></p>
+<object class="cv-embed" data="/files/CV.pdf" type="application/pdf">
+  <p>Your browser can't display the PDF inline.
+  <a href="/files/CV.pdf">Download it here.</a></p>
 </object>

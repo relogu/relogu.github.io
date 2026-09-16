@@ -1,6 +1,7 @@
 ---
 title: "SparsyFed: Sparse Adaptive Federated Training"
 collection: publications
+featured: true
 excerpt: 'This work proposes a novel approach to sparse federated training that does not require to fix a global mask to be efficient.'
 permalink: /publication/2025-02-10-sparsyfed
 date: 2025-02-10

@@ -1,10 +1,11 @@
 ---
 title: "Photon: Federated LLM Pre-Training"
 collection: publications
+featured: true
 permalink: /publication/2024-11-05-photon-system-paper
 excerpt: 'We present Photon, the first fully federated system for the federated pre-training of large language models.'
 date: 2024-11-05
-venue: 'MLSys 2025 - The Eighth Annual Conference on Machine Learning and Systems'
+venue: 'MLSys 2025 - Proceedings of Machine Learning and Systems 7'
 paperurl: 'https://arxiv.org/abs/2411.02908'
 citation: 'Lorenzo Sani, Alex Iacob, Zeyu Cao, Royson Lee, Bill Marino, Yan Gao, Dongqi Cai, Zexi Li, Wanru Zhao, Xinchi Qiu, & Nicholas D. Lane. (2024). Photon: Federated LLM Pre-Training.'
 ---

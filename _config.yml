@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Lorenzo Sani"
 title_separator          : "-"
 name                     : &name "Lorenzo Sani"
-description              : &description "CS PhD Canditate @ University of Cambridge"
+description              : &description "Research Scientist at Flower Labs, finishing a CS PhD at the University of Cambridge."
 url                      : https://relogu.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "relogu/relogu.github.io"
@@ -86,7 +86,7 @@ analytics:
 author:
   name             : "Lorenzo Sani"
   avatar           : "lorenzo.jpeg"
-  bio              : "Hi there! I am a PhD candidate in Computer Science at the University of Cambridge under the supervision of Prof. Nicholas D. Lane. My research focuses on large-scale federated laerning, federated learning efficiency and optimization. I'm part of the CaMLSys group."
+  bio              : "Research Scientist at Flower Labs and a final-year PhD student in Computer Science at the University of Cambridge, supervised by Prof. Nicholas D. Lane in the CaMLSys group. I work on the systems and optimization that make large-scale federated and distributed training of foundation models practical."
   location         : "Cambridge, United Kingdom"
   employer         : "University of Cambridge"
   pubmed           : 
@@ -201,54 +201,37 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
+      layout: entry
   # _pages
   - scope:
       path: ""
       type: pages
     values:
-      layout: single
-      author_profile: true
+      layout: page
   # _teaching
   - scope:
       path: ""
       type: teaching
     values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
+      layout: entry
   # _publications
   - scope:
       path: ""
       type: publications
     values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
+      layout: entry
   # _portfolio
   - scope:
       path: ""
       type: portfolio
     values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
+      layout: entry
   # _talks
   - scope:
       path: ""
       type: talks
     values:
-      layout: talk
-      author_profile: true
-      share: true
+      layout: entry
 
 
 # Sass/SCSS

@@ -1,0 +1,33 @@
+---
+layout: base
+---
+<div class="wrap">
+  <article>
+    <header class="entry-header prose">
+      <p class="eyebrow">
+        {%- if page.collection == 'publications' %}Publication
+        {%- elsif page.collection == 'talks' %}Talk
+        {%- elsif page.collection == 'teaching' %}Teaching
+        {%- else %}{{ page.collection }}{% endif -%}
+      </p>
+      <h1>{{ page.title }}</h1>
+      <div class="entry-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %B %Y" }}</time>
+        {%- if page.venue %}<span class="chip chip-accent">{{ page.venue }}</span>{% endif -%}
+        {%- if page.location %}<span>{{ page.location }}</span>{% endif -%}
+        {%- if page.type %}<span class="chip">{{ page.type }}</span>{% endif -%}
+      </div>
+      {%- if page.paperurl or page.slidesurl or page.codeurl %}
+      <div class="link-row">
+        {%- if page.paperurl %}<a href="{{ page.paperurl }}">Paper</a>{% endif -%}
+        {%- if page.slidesurl %}<a href="{{ page.slidesurl | relative_url }}">Slides</a>{% endif -%}
+        {%- if page.codeurl %}<a href="{{ page.codeurl }}">Code</a>{% endif -%}
+      </div>
+      {%- endif %}
+    </header>
+
+    <div class="entry-body prose">
+      {{ content }}
+    </div>
+  </article>
+</div>
