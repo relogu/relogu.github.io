@@ -198,6 +198,20 @@ Each pair of counts must match. The `grep -L` skips the redirect stubs that
 out the `/talks/` listing page. Do not open the PR if the build logs a YAML
 exception.
 
+**In the cloud sandbox** (where the scheduled routine runs), the build command
+above fails as written. The `jekyll` executable isn't on the `PATH`, so bundler
+reports "command not found: jekyll". And `en_US.UTF-8` isn't installed, so the
+Sass step fails. Build like this instead:
+
+```bash
+export PATH="/opt/rbenv/versions/3.3.6/bin:$PATH"
+LANG=C.UTF-8 LC_ALL=C.UTF-8 bundle exec jekyll build 2>&1 | grep -i "error\|YAML Exception"
+```
+
+If the Ruby version there changes, use the directory that `gem environment`
+lists as EXECUTABLE DIRECTORY. If the GitHub Metadata plugin fails with a 403
+from api.github.com, add `API_URL="http://127.0.0.1:1/"` to the build command.
+
 ## 7. Open the PR
 
 If steps 1–5 found nothing new, stop without opening a PR. A no-op PR every
