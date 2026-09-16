@@ -2,8 +2,8 @@
 title: "SparsyFed: Sparse Adaptive Federated Training"
 collection: publications
 excerpt: 'This work proposes a novel approach to sparse federated training that does not require to fix a global mask to be efficient.'
-permalink: /publication/2024-10-07-dept
-date: 2024-10-07
+permalink: /publication/2025-02-10-sparsyfed
+date: 2025-02-10
 venue: 'ICLR 2025 - The Thirteenth International Conference on Learning Representations'
 paperurl: 'https://openreview.net/forum?id=OBUQNASaWw'
 citation: 'Adriano Guastella*, Lorenzo Sani*, Alex Iacob, Alessio Mora, Paolo Bellavista, & Nicholas Donald Lane (2025). SparsyFed: Sparse Adaptive Federated Learning. In The Thirteenth International Conference on Learning Representations.
