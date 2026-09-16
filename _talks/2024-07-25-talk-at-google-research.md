@@ -4,7 +4,7 @@ collection: talks
 type: "Talk"
 permalink: /talks/2024-07-25-talk-at-google-research
 venue: Online, Google Research, Seattle
-date: 2024-07-25
+date: 2024-08-01
 location: "Seattle, WA, USA"
 ---
 
