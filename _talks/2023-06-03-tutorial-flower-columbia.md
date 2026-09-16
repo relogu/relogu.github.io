@@ -4,7 +4,7 @@ collection: talks
 type: "Tutorial"
 permalink: /talks/2023-06-03-tutorial-flower-columbia
 venue: Columbia University
-date: 2023-06-03
+date: 2023-03-06
 location: "New York NY, USA"
 ---
 
