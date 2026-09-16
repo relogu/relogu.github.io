@@ -18,7 +18,10 @@ python3 scripts/check_new_papers.py --json
 
 This lists arXiv papers by Lorenzo Sani with no entry in `_publications/`. It
 already filters out known same-name authors (see `EXCLUDE_ARXIV_IDS` in the
-script).
+script). It recognises an existing entry by any arXiv ID in the file (the
+`paperurl`, the citation, or an `arxiv:` field) and, failing that, by title. If
+it lists a paper that already has a page, add `arxiv: "XXXX.XXXXX"` to that page
+instead of creating a second one.
 
 Before writing an entry, sanity-check the author list in the JSON. If Lorenzo
 Sani appears but none of the usual collaborators do (Nicholas D. Lane, Alex
@@ -33,6 +36,10 @@ For each existing preprint in `_publications/` (`venue: 'Preprint'` or
 paper has been accepted somewhere, update `venue` to the full conference name,
 e.g. `ICML 2026 - The Forty-Third International Conference on Machine Learning`.
 Only claim an acceptance the arXiv metadata actually states — never infer one.
+
+If you point `paperurl` at the conference version (OpenReview, proceedings)
+instead of arXiv, keep the arXiv ID in an `arxiv: "XXXX.XXXXX"` field right
+after `paperurl`. Without it, step 1 can report the paper as missing again.
 
 ## 3. Write the paper entries
 
