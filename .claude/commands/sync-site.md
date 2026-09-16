@@ -2,8 +2,10 @@
 description: Check for new papers and open a PR adding them to the site
 ---
 
-Keep https://relogu.github.io up to date. Work on a fresh branch off `master`
-and open a pull request — never push directly to `master` or `relogu`.
+Keep https://relogu.github.io up to date. GitHub Pages deploys the `relogu`
+branch: run `git fetch origin`, create a fresh branch off `origin/relogu`, and
+open a pull request back into `relogu` — never push to it directly. Ignore
+`master`; it is a stale copy of the academicpages template, not the site.
 
 ## 1. Find what's missing
 
@@ -77,9 +79,16 @@ exception.
 
 ## 5. Open the PR
 
-Title: `Site update: N new publication(s)`. In the body, list each paper added
-with its arXiv link, each venue changed, and anything you deliberately skipped
-and why. Assign it to `relogu`. Do not merge it — Lorenzo reviews.
+Name the repo and base explicitly. A clone with an `upstream` remote (the
+academicpages template) can otherwise send the PR there.
+
+```bash
+gh pr create --repo relogu/relogu.github.io --base relogu --assignee relogu \
+  --title "Site update: N new publication(s)" --body "..."
+```
+
+In the body, list each paper added with its arXiv link, each venue changed, and
+anything you deliberately skipped and why. Do not merge it — Lorenzo reviews.
 
 ## Out of scope
 
