@@ -7,6 +7,7 @@ permalink: /publication/2025-02-10-sparsyfed
 date: 2025-02-10
 venue: 'ICLR 2025 - The Thirteenth International Conference on Learning Representations'
 paperurl: 'https://openreview.net/forum?id=OBUQNASaWw'
+arxiv: "2504.05153"
 citation: 'Adriano Guastella*, Lorenzo Sani*, Alex Iacob, Alessio Mora, Paolo Bellavista, & Nicholas Donald Lane (2025). SparsyFed: Sparse Adaptive Federated Learning. In The Thirteenth International Conference on Learning Representations.
 '
 ---

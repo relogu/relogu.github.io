@@ -28,6 +28,16 @@ ATOM = "{http://www.w3.org/2005/Atom}"
 ARXIV = "{http://arxiv.org/schemas/atom}"
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
+# An arXiv ID mentioned in a publication file: an arxiv.org link, an
+# "arXiv:XXXX.XXXXX" citation, or an `arxiv: "XXXX.XXXXX"` front matter field.
+# The ID pattern is strict so a trailing full stop is not captured.
+ARXIV_ID_RE = re.compile(
+    r"""(?:arxiv\.org/(?:abs|pdf)/|arxiv:\s*["']?)(\d{4}\.\d{4,5})""",
+    re.IGNORECASE,
+)
+# Shortest subtitle (normalized) that is trusted to identify a paper on its own.
+MIN_SUBTITLE_KEY = 20
+
 
 def fetch_arxiv(author: str, max_results: int = 100) -> list[dict]:
     query = urllib.parse.urlencode(
@@ -73,20 +83,32 @@ def normalize_title(title: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", title.lower())
 
 
-def known_publications() -> tuple[set[str], set[str]]:
-    """arXiv IDs and normalized titles already present in _publications/.
+def title_keys(title: str) -> set[str]:
+    """Keys a title can match on: the whole title, and the part after the first
+    colon, so "LUNAR: LLM Unlearning via ..." matches the arXiv title
+    "LLM Unlearning via ..."."""
+    keys = {normalize_title(title)}
+    if ":" in title:
+        subtitle = normalize_title(title.split(":", 1)[1])
+        if len(subtitle) >= MIN_SUBTITLE_KEY:
+            keys.add(subtitle)
+    return keys
 
-    Titles matter because some entries link to OpenReview or a proceedings DOI
-    instead of arXiv, and would otherwise look missing on every run.
+
+def known_publications() -> tuple[set[str], set[str]]:
+    """arXiv IDs and title keys already present in _publications/.
+
+    Some entries link to OpenReview or a proceedings page instead of arXiv. They
+    should carry an `arxiv:` front matter field; title matching is the fallback
+    for entries that don't, since a title can differ from arXiv's.
     """
     ids, titles = set(), set()
     for path in (ROOT / "_publications").glob("*.md"):
         text = path.read_text()
-        ids.update(re.findall(r"arxiv\.org/abs/([\d.]+)", text))
-        ids.update(re.findall(r"arXiv:([\d.]+)", text))
-        m = re.search(r'^title:\s*["\'](.+?)["\']\s*$', text, re.MULTILINE)
+        ids.update(ARXIV_ID_RE.findall(text))
+        m = re.search(r"^title:\s*(.+?)\s*$", text, re.MULTILINE)
         if m:
-            titles.add(normalize_title(m.group(1)))
+            titles.update(title_keys(m.group(1).strip("\"'")))
     return ids, titles
 
 
@@ -103,7 +125,7 @@ def main() -> int:
         # Guard against arXiv's fuzzy author matching returning near-misses.
         if any(args.author.split()[-1] in a for a in p["authors"])
         and p["arxiv_id"] not in known_ids
-        and normalize_title(p["title"]) not in known_titles
+        and not title_keys(p["title"]) & known_titles
         and p["arxiv_id"] not in EXCLUDE_ARXIV_IDS
     ]
 
