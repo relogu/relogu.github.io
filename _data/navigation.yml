@@ -11,3 +11,7 @@ main:
 
   - title: "CV"
     url: /cv/
+
+  # TODO: add a "Service" submenu/page listing reviewing and other academic
+  # service commitments (conference/journal reviewing, PC/AC membership, etc.).
+  # Content must come from Lorenzo directly before this is added.
