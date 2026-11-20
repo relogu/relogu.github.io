@@ -192,6 +192,9 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
+  service:
+    output: true
+    permalink: /:collection/:path/
 
 
 # Defaults
@@ -230,6 +233,12 @@ defaults:
   - scope:
       path: ""
       type: talks
+    values:
+      layout: entry
+  # _service
+  - scope:
+      path: ""
+      type: service
     values:
       layout: entry
 
